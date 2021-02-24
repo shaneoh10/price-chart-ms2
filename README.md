@@ -1,45 +1,20 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Website for Price Chart
 
-Welcome USER_NAME,
+## Code Institute Milestone Project 2 : Interactive Front End Development
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use.
+Price Chart is a website designed to provide users with the ability to search for real-time and historical data for stocks, foreign exchange and crypto-currency prices and view this data on a chart. The website will be easy to navigate and the information will be simple to comprehend by users who are familiar with and also those who are not so familiar with financial data.
 
-## Gitpod Reminders
+## UX
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+## Strategy
 
-`python3 -m http.server`
+The price chart website is for users who are looking for real-time and historical data on stocks, foreign exchange and crypto-currency prices.The users may be interested in viewing this data for their own personal reasons like investing or trading, or they may want to view this data for research they may be performing as part of a project for a college course. The website will be simple to navigate and the data will be presented in a clear and easy to read format. As this website will only contain basic stock data it is targeted towards users with less experience with financial data as it may not be suited for experienced traders who are looking for more comprehensive data for their analysis, however, the website will have a professional feel to it and the data will be accurate so it is not strictly limited to beginners. The users of the price chart website will want to see clean and clearly labeled charts (price, date, time, stock name) that will not cause them any confusion with only relevant information being displayed to the user.
 
-A blue button should appear to click: *Make Public*,
-
-Another blue button should appear to click: *Open Browser*.
-
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
-
-A blue button should appear to click: *Make Public*,
-
-Another blue button should appear to click: *Open Browser*.
-
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
-
-## Updates Since The Instructional Video
-
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
-
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
-
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
-
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
-
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
-
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
-
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
-
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
-
---------
-
-Happy coding!
+#### As a user I want to:
+* be able to instinctively navigate the website to efficienty find the required information
+* be able to understand what the site is about and how it works
+* easily search for and view price charts for stocks, foreign exchange and crypto-currencies
+* be able to choose different time intervals on the price charts
+* be able to view the website on various devices (mobile, tablet, desktop)
+* be able to easily contact price chart with any questions or issues I am have regarding the website
+* be easily directed to any social media channels to remain up to date with price chart
