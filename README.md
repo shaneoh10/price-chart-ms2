@@ -18,3 +18,26 @@ The price chart website is for users who are looking for real-time and historica
 * be able to view the website on various devices (mobile, tablet, desktop)
 * be able to easily contact price chart with any questions or issues I am have regarding the website
 * be easily directed to any social media channels to remain up to date with price chart
+
+## Scope 
+
+After analysing the user stories, I have decided to include the following features as my minimum scope:
+* Responsive design
+* Information on how the website works
+* Individual sections for stocks, crypto-currency and foreign exchange (forex)
+* Price charts for each section with buttons to choose time interval of chart
+* Contact form
+* Social media links in footer
+
+## Structure 
+
+I did some research on other websites that provide stock data and price charts to give me an idea of what users are familiar with. During my research I found that some websites provide a lot of data which may be difficult to understand and can be intimidating to less experienced users. Because of this I decided to design the website in a traditional manner similar to what I found on my research but with just the basic price data in the chart sections so as not to give users an overload of information. The website is designed to be easy to navigate and all information is displayed in a clean manner so that users will have a familiar and enjoyable experience.
+
+I have structuted the website with: 
+* A brand logo on the top left with a navbar to the right as is common to most websites
+* A collapsible navbar with a hamburger icon for smaller screens
+* 5 seperate pages - Home, Stocks, Forex, Crypto, Contact
+* Navbar and footer common to all 5 pages
+* Social media icons in the footer
+* Main content written in bootstrap for responsive design
+
