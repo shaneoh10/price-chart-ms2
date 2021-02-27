@@ -41,5 +41,7 @@ I have structuted the website with:
 * Social media icons in the footer
 * Main content written in bootstrap for responsive design
 
+## Skeleton 
 
+I designed wireframes for mobile, tablet and desktop using Balsamiq. These wireframes can be viewed [here.](https://github.com/shaneoh10/price-chart-ms2/tree/master/assets/documents/wireframes)
 
