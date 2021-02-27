@@ -41,3 +41,5 @@ I have structuted the website with:
 * Social media icons in the footer
 * Main content written in bootstrap for responsive design
 
+
+
