@@ -16,7 +16,7 @@
 
 <body>
     <header id="home">
-        <nav class="navbar navbar-sticky navbar-expand-lg navbar-dark bg-dark">
+        <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
             <div class="container-fluid">
                 <a class="navbar-brand" href="#"><strong>price</strong>chart</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -24,7 +24,7 @@
                     aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse mr-auto" id="navbarNavDropdown">
+                <div class="justify-content-end collapse navbar-collapse" id="navbarNavDropdown">
                     <ul class="navbar-nav">
                         <li class="nav-item">
                             <a class="nav-link active" aria-current="page" href="#">Home</a>
@@ -52,40 +52,42 @@
     <!-- FOOTER  -->
 
     <footer id="footer">
-        <div class="bg-dark text-light container-fluid d-flex justify-content-center">
+        <div class="footer--container bg-dark text-light container-fluid">
             <div class="row">
-                <div class="col col-12 col-md-4">
+                <div class="footer--list col col-12 col-md-4">
                     <div>
                         <h4><strong>price</strong>chart</h4>
-                        <p>Copyright &copy; 2021 Price Chart Ltd.</p>
+                        <p class="footer--sub">Copyright &copy; 2021 Price Chart Ltd.</p>
                         <ul class="list-inline">
                             <li class="list-inline-item"><a href="https://facebook.com/" target="_blank"><i
-                                        class="fab fa-facebook"></i></a></li>
+                                        class="footer--icon fab fa-facebook"></i></a></li>
                             <li class="list-inline-item"><a href="https://github.com/" target="_blank"><i
-                                        class="fab fa-github"></i></a></li>
+                                        class="footer--icon fab fa-github"></i></a></li>
                             <li class="list-inline-item"><a href="https://linkedin.com/" target="_blank"><i
-                                        class="fab fa-linkedin"></i></a></li>
+                                        class="footer--icon fab fa-linkedin"></i></a></li>
                             <li class="list-inline-item"><a href="https://twitter.com/" target="_blank"><i
-                                        class="fab fa-twitter"></i></a></li>
+                                        class="footer--icon fab fa-twitter"></i></a></li>
                         </ul>
                     </div>
                 </div>
-                <div class="col col-6 col-md-4">
+                <div class="footer--list col col-6 col-md-4">
                     <ul class="list-unstyled">
-                        <li><a class="text-muted" href="#">Home</a></li>
-                        <li><a class="text-muted" href="#">Forex</a></li>
-                        <li><a class="text-muted" href="#">Stocks</a></li>
-                        <li><a class="text-muted" href="#">Crypto</a></li>
-                        <li><a class="text-muted" href="#">Contact Us</a></li>
+                        <li class="footer--header">Menu</li>
+                        <li class="footer--sub"><a class="footer--link" href="#">Home</a></li>
+                        <li class="footer--sub"><a class="footer--link" href="#">Forex</a></li>
+                        <li class="footer--sub"><a class="footer--link" href="#">Stocks</a></li>
+                        <li class="footer--sub"><a class="footer--link" href="#">Crypto</a></li>
+                        <li class="footer--sub"><a class="footer--link" href="#">Contact Us</a></li>
                     </ul>
                 </div>
-                <div class="col col-6 col-md-4">
+                <div class="footer--list col col-6 col-md-4">
                     <ul class="list-unstyled">
-                        <li>Main Street</li>
-                        <li>Cork</li>
-                        <li>Ireland</li>
-                        <li>info@pricechart.com</li>
-                        <li>(+353) 01 123 1234</li>
+                        <li class="footer--header">Contact Details</li>
+                        <li class="footer--sub">Main Street</li>
+                        <li class="footer--sub">Cork</li>
+                        <li class="footer--sub">Ireland</li>
+                        <li class="footer--sub">info@pricechart.ie</li>
+                        <li class="footer--sub">(+353) 01 123 1234</li>
                     </ul>
                 </div>
             </div>

@@ -13,3 +13,54 @@ header {
     background: url(../images/stock.jpeg);
     background-size: cover;
 }
+
+
+
+/************ FOOTER */
+
+.footer--container {
+    padding: 0.6rem;
+}
+
+.footer--list {
+    margin: 1rem 0;
+}
+
+.footer--header {
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+.footer--sub,
+.footer--icon,
+.footer--link {
+    color: #8d8d8d;
+    margin-top: 0.4rem;
+}
+
+.footer--icon {
+    font-size: 1.6rem;
+    margin-right: 0.8rem;
+}
+
+.footer--list li a {
+    text-decoration: none;
+}
+
+.footer--icon:hover,
+.footer--icon:active,
+.footer--list li a:hover,
+.footer--list li a:active {
+    color:#d6d4d4;
+}
+
+
+/************ MEDIA QUERIES */
+
+@media screen and (min-width: 768px) {
+  .footer--list {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+}
