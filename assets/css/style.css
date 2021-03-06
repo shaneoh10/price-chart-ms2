@@ -4,7 +4,7 @@ html, body {
      width: 100%;
      overflow-x: hidden;
      font-size: 16px;
-     background-color: #fafafa;
+     color: #fafafa;
      scroll-behavior: smooth;
 }
 
@@ -14,12 +14,31 @@ header {
     background-size: cover;
 }
 
+/************ NAVBAR */
+
+.navbar {
+    background-color: rgba(0, 0, 0, 0.75);
+}
+
+.nav-link:hover,
+.nav-link:active {
+    color: #5086fc !important;
+}
+
+.navbar a {
+    color: #fafafa !important;
+}
+
+.dropdown-menu a {
+    color: #242424 !important;
+}
 
 
 /************ FOOTER */
 
 .footer--container {
     padding: 0.6rem;
+    background-color: #242424;
 }
 
 .footer--list {
@@ -62,5 +81,11 @@ header {
     display: flex;
     flex-direction: row;
     justify-content: center;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  html, body {
+      font-size: 18px;
   }
 }
