@@ -12,11 +12,14 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" crossorigin="anonymous" />
     <!-- LOCAL CSS STYLESHEET  -->
     <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+    <!-- CHART.JS CDN  -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js"></script>
+
 </head>
 
 <body>
-    <header id="stocks">
-        <nav class="navbar fixed-top navbar-expand-lg navbar-dark">
+    <header>
+        <nav class="navbar sticky-top navbar-expand-lg navbar-dark">
             <a class="navbar-brand navbar--logo" href="index.html"><strong>price</strong><span
                     style="color:#5086fc">chart</span></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
@@ -46,6 +49,70 @@
             </div>
         </nav>
     </header>
+
+    <section id="stocks">
+        <div class="chart">
+            <h2 class="text-center">Stocks</h2>
+            <hr class="h--rule">
+        </div>
+        <div class="search-bar text-center">
+            <p>Enter a stock symbol into the search bar below and click <i>Go!</i> to generate a price chart.</p>
+            <input type="text">
+            <button>Go!</button>
+        </div>
+        <div class="chart-container">
+            <div id="stock-details">
+                <ul class="list-unstyled">
+                    <li>Microsoft</li>
+                    <li>232.86 USD</li>
+                </ul>
+            </div>
+            <canvas id="myChart" width="400" height="400"></canvas>
+            <script>
+                var ctx = document.getElementById('myChart').getContext('2d');
+                var myChart = new Chart(ctx, {
+                    type: 'line',
+                    data: {
+                        labels: ['01/03', '02/03', '04/03', '05/03', '08/03', '09/03'],
+                        datasets: [{
+                            label: 'Price USD',
+                            data: [12, 19, 3, 5, 2, 3],
+                            backgroundColor: [
+                                'rgba(0, 146, 255, 0.2)',
+                            ],
+                            borderColor: [
+                                'rgba(0, 146, 255, 1)',
+                            ],
+                            borderWidth: 1
+                        }]
+                    },
+                    options: {
+                        maintainAspectRatio: false,
+                        scales: {
+                            yAxes: [{
+                                ticks: {
+                                    beginAtZero: false
+                                }
+                            }]
+                        }
+                    }
+                });
+            </script>
+            <div class="interval-buttons text-center">
+                <input type="radio" id="1min" name="interval" value="1min">
+                <label for="1min">1 Min</label>
+                <input type="radio" id="15min" name="interval" value="15min">
+                <label for="15min">15 Min</label>
+                <input type="radio" id="30min" name="interval" value="30min">
+                <label for="30min">30 Min</label>
+                <input type="radio" id="1hour" name="interval" value="1hour">
+                <label for="1hour">1 Hour</label>
+                <input type="radio" id="1day" name="interval" value="1day">
+                <label for="1day">1 Day</label>
+            </div>
+        </div>
+
+    </section>
 
     <!-- FOOTER  -->
 

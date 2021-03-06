@@ -16,7 +16,9 @@ html, body {
 
 #stocks {
     height: 100vh;
-    background-color: aquamarine;
+    margin-top: 1rem;
+    background-color: #fafafa;
+    color: #000;
 }
 
 #forex {
@@ -99,6 +101,33 @@ html, body {
 .footer--list li a:hover,
 .footer--list li a:active {
     color:#d6d4d4;
+}
+
+/************ CHARTS */
+
+.h--rule {
+     width: 4rem;
+     height: 0.05rem;
+     background-color: #d6d4d4;
+}
+
+.chart-container {
+  position: relative;
+  margin: auto;
+  height: 50vh;
+  width: 80vw;
+}
+
+.search-bar {
+    margin-bottom: 2rem;
+}
+
+.interval-buttons input {
+    margin: 2rem 0 0 1.6rem;
+}
+
+.interval-buttons label {
+    font-size: 0.8rem;
 }
 
 
