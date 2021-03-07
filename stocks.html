@@ -57,59 +57,24 @@
         </div>
         <div class="search-bar text-center">
             <p>Enter a stock symbol into the search bar below and click <i>Go!</i> to generate a price chart.</p>
-            <input type="text">
-            <button>Go!</button>
+            <input type="text" id="stock-symbol">
+            <button onclick="getStocks()">Go!</button>
         </div>
         <div class="chart-container">
             <div id="stock-details">
-                <ul class="list-unstyled">
-                    <li>Microsoft</li>
-                    <li>232.86 USD</li>
-                </ul>
+                <p id="stockName"></p>
+                <p id="stockPrice"></p>
             </div>
-            <canvas id="myChart" width="400" height="400"></canvas>
-            <script>
-                var ctx = document.getElementById('myChart').getContext('2d');
-                var myChart = new Chart(ctx, {
-                    type: 'line',
-                    data: {
-                        labels: ['01/03', '02/03', '04/03', '05/03', '08/03', '09/03'],
-                        datasets: [{
-                            label: 'Price USD',
-                            data: [12, 19, 3, 5, 2, 3],
-                            backgroundColor: [
-                                'rgba(0, 146, 255, 0.2)',
-                            ],
-                            borderColor: [
-                                'rgba(0, 146, 255, 1)',
-                            ],
-                            borderWidth: 1
-                        }]
-                    },
-                    options: {
-                        maintainAspectRatio: false,
-                        scales: {
-                            yAxes: [{
-                                ticks: {
-                                    beginAtZero: false
-                                }
-                            }]
-                        }
-                    }
-                });
-            </script>
             <div class="interval-buttons text-center">
                 <input type="radio" id="1min" name="interval" value="1min">
                 <label for="1min">1 Min</label>
-                <input type="radio" id="15min" name="interval" value="15min">
-                <label for="15min">15 Min</label>
-                <input type="radio" id="30min" name="interval" value="30min">
-                <label for="30min">30 Min</label>
-                <input type="radio" id="1hour" name="interval" value="1hour">
+                <input type="radio" id="1hour" name="interval" value="1h">
                 <label for="1hour">1 Hour</label>
-                <input type="radio" id="1day" name="interval" value="1day">
+                <input type="radio" id="1day" name="interval" value="1day" checked>
                 <label for="1day">1 Day</label>
             </div>
+            <div id="loader-container" class="text-center"></div>
+            <canvas id="myChart" width="400" height="400"></canvas>
         </div>
 
     </section>
@@ -161,10 +126,12 @@
 
 
     <!-- JQUERY CDN  -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" crossorigin="anonymous"></script>
     <!-- BOOTSTRAP JAVASCRIPT CDN  -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
         crossorigin="anonymous"></script>
+    <!-- LOCAL JAVASCRIPT  -->
+    <script src="assets/js/stockdata.js"></script>
 </body>
 
 </html>
