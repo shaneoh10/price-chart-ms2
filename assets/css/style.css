@@ -14,16 +14,11 @@ html, body {
     background-size: cover;
 }
 
-#stocks {
+#stocks, #forex {
     height: 100vh;
     margin-top: 1rem;
     background-color: #fafafa;
     color: #000;
-}
-
-#forex {
-    height: 100vh;
-    background-color: burlywood;
 }
 
 #crypto {

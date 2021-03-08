@@ -1,21 +1,16 @@
 
-function getStocks(event) {
+function getCurrency(event) {
 
     var chartPrice = [];
     var chartTime = [];
 
-    $('#stockName').html('');
-    $('#stockPrice').html('');
+    $('#currency-name').html('');
+    $('#currency-price').html('');
 
     var interval = $('input[name="interval"]:checked').val();
     console.log(interval);
 
-
-    var stockSymbol = $('#stock-symbol').val();
-    if (!stockSymbol) {
-        $('#stockName').html(`<h3>Please enter a stock symbol!</h3>`);
-        return;
-    }
+    var currencyPair = $('#currency-pair').val();
 
     $('#loader-container').html(
         `<div id="loader">
@@ -23,21 +18,19 @@ function getStocks(event) {
         </div>`);
 
     $.when(
-        $.getJSON(`https://api.twelvedata.com/stocks?symbol=${stockSymbol}&apikey=d6cceea44f2c4640ba375bcfb65a4fc8`),
-        $.getJSON(`https://api.twelvedata.com/time_series?symbol=${stockSymbol}&interval=1min&apikey=d6cceea44f2c4640ba375bcfb65a4fc8`),
-        $.getJSON(`https://api.twelvedata.com/time_series?symbol=${stockSymbol}&interval=${interval}&apikey=d6cceea44f2c4640ba375bcfb65a4fc8`)
+        $.getJSON(`https://api.twelvedata.com/time_series?symbol=${currencyPair}&interval=1min&apikey=d6cceea44f2c4640ba375bcfb65a4fc8`),
+        $.getJSON(`https://api.twelvedata.com/time_series?symbol=${currencyPair}&interval=${interval}&apikey=d6cceea44f2c4640ba375bcfb65a4fc8`)
     ).then(
-        function (response1, response2, response3) {
+        function (response1, response2) {
             $('#loader-container').html('');
-            var stockName = response1[0].data[0].name;
-            var stockPrice = response2[0].values[0].close;
-            var currency = response1[0].data[0].currency;
-            stockPrice = stockPrice.slice(0, -3);
+            var stockName = response1[0].meta.symbol;
+            var stockPrice = response1[0].values[0].close;
+            var currency = response1[0].meta.currency_quote;
             console.log(response1);
-            $('#stockName').html(stockName);
-            $('#stockPrice').html(stockPrice + ' ' + currency);
+            $('#currency-name').html(stockName);
+            $('#currency-price').html(stockPrice + ' ' + currency);
 
-            var data = response3[0];
+            var data = response2[0];
             for (i = 0; i < data.values.length; i++) {
                 chartPrice.push(data.values[i].open);
                 chartTime.push(data.values[i].datetime);
