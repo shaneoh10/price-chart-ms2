@@ -53,7 +53,6 @@ html, body {
     color: #242424 !important;
 }
 
-
 /************ FOOTER */
 
 .footer--container {
@@ -120,6 +119,53 @@ html, body {
     font-size: 0.8rem;
 }
 
+/************ HOME PAGE  */
+
+.opaque-overlay {
+    /* Credit to Code Institute whiskey drop walkthrough project */
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.home-container {
+     height: 100vh;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+}
+.btn {
+    width: 10rem;
+    margin: 1rem;
+    border-radius: 1rem;
+}
+
+.btn--go {
+    background-color: #286cfd;
+    border: 1px solid #286cfd;
+}
+
+.btn--contact {
+    background-color: #fafafa;
+    border: 1px solid #286cfd;
+}
+
+.btn:hover,
+.btn:active {
+    background-color: #5086fc;
+}
+
+.home-stock {
+    /* background-color: rgba(0, 0, 0, 0.3); */
+    border-radius: 1rem;   
+}
+
+.table {
+    border-radius: 0.6rem;
+}
 
 /************ MEDIA QUERIES */
 
