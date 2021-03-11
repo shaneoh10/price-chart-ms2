@@ -15,16 +15,14 @@ html, body {
     background-size: cover;
 }
 
-#stocks, #forex, #crypto {
+#stocks, #forex, #crypto, #contact {
     height: 100vh;
-    margin-top: 1rem;
     background-color: #fafafa;
     color: #000;
 }
 
-#contact {
-    height: 100vh;
-    background-color: #313131;
+.main-heading {
+    margin-top: 2rem;
 }
 
 /************ NAVBAR */
@@ -55,6 +53,12 @@ html, body {
 }
 
 /************ FOOTER */
+
+footer {
+    display: block;
+    clear: both;
+    position: relative;
+}
 
 .footer--container {
     padding: 0.6rem;
@@ -96,16 +100,16 @@ html, body {
 /************ CHARTS */
 
 .h--rule {
-     width: 4rem;
-     height: 0.05rem;
-     background-color: #d6d4d4;
+    width: 4rem;
+    height: 0.05rem;
+    background-color: #d6d4d4;
 }
 
 .chart-container {
-  position: relative;
-  margin: auto;
-  height: 50vh;
-  width: 80vw;
+    position: relative;
+    margin: auto;
+    height: 50vh;
+    width: 80vw;
 }
 
 .search-bar {
@@ -160,12 +164,29 @@ html, body {
 }
 
 .home-stock {
-    /* background-color: rgba(0, 0, 0, 0.3); */
     border-radius: 1rem;   
 }
 
 .table {
     border-radius: 0.6rem;
+}
+
+/************ CONTACT PAGE */
+.form-container, .details-container {
+    padding: 3rem;
+}
+
+.contact-ul {
+    margin: 0 auto;
+}
+
+.contact-head {
+    font-weight: bold;
+    font-size: 1.6rem;
+}
+
+.contact-sub {
+    margin-top: 0.8rem;
 }
 
 /************ MEDIA QUERIES */
