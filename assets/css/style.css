@@ -11,7 +11,7 @@ html, body {
 
 #home {
     height: 100vh;
-    background: url(../images/stock.jpeg);
+    background: url(../images/stock.jpeg) no-repeat;
     background-size: cover;
 }
 
@@ -98,6 +98,10 @@ footer {
 }
 
 /************ CHARTS */
+
+.chart-control {
+    height: 225px !important;
+}
 
 .h--rule {
     width: 4rem;

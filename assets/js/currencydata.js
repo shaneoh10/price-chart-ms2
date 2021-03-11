@@ -58,6 +58,8 @@ function getCurrency(event) {
                     }]
                 },
                 options: {
+                    legend: {display: false},
+                    responsive: true,
                     maintainAspectRatio: false,
                     scales: {
                         yAxes: [{
