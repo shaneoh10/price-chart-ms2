@@ -2,7 +2,9 @@
 
 ## Code Institute Milestone Project 2 : Interactive Front End Development
 
-Price Chart is a website designed to provide users with the ability to search for real-time and historical data for stocks, foreign exchange and crypto-currency prices and view this data on a chart. The website will be easy to navigate and the information will be simple to comprehend by users who are familiar with and also those who are not so familiar with financial data.
+Price Chart is a website designed to provide users with the ability to search for real-time and historical data for stocks, foreign exchange and crypto-currency prices and view this data on a chart. The website will be easy to navigate and the information will be simple to comprehend by users who are familiar with and also those who are not so familiar with financial data. 
+
+A link to the live website can be found [here.](https://shaneoh10.github.io/price-chart-ms2/)
 
 ## UX
 
