@@ -187,6 +187,25 @@ footer {
     border-top: none;
 }
 
+#charts {
+    color: #242424;
+}
+
+.chart-heading {
+    margin-top: 2rem;
+}
+
+.chart-box {
+    border: 1px solid #286cfd;
+    border-radius: 1rem;
+    margin: 1rem 1rem 3rem 1rem;
+    background-color: #ebebeb;
+}
+
+.chart-box h3 {
+    margin: 1.6rem 0;
+}
+
 /************ CONTACT PAGE */
 .form-container, .details-container {
     padding: 3rem;
