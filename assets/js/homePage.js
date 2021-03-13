@@ -35,14 +35,16 @@ function getTesla() {
             $('#low').html(low);
 
         }, function (errorResponse) {
-            console.log(errorResponse);
-            if (errorResponse.status === 404) {
-                $('#date').html(`<h2>No info found for ${stockSymbol}</h2>`);
+            if (errorResponse.code === 400) {
+                $('#table').html(`<h2>No info found for TSLA</h2>`);
             }
-            else {
-                console.log(errorResponse);
-                $('#date').html(
-                    `<h2>Error: ${errorResponse.responseJSON.message}</h2>`);
+            else if (errorResponse.code === 429) {
+                $('#table').html(`API Limit reached, please try again in 1 minute`);
+            }
+            else if (errorResponse.status === 'error') {
+                console.log(errorResponse.code);
+                $('#table').html(
+                    `Error: ${errorResponse.message}`);
             }
         });
 }
