@@ -100,7 +100,7 @@ footer {
 /************ CHARTS */
 
 .chart-control {
-    height: 225px !important;
+    height: 45vh !important;
 }
 
 .h--rule {
@@ -196,7 +196,6 @@ footer {
 }
 
 .chart-box {
-    border: 1px solid #286cfd;
     border-radius: 1rem;
     margin: 1rem 1rem 3rem 1rem;
     background-color: #ebebeb;
@@ -240,6 +239,10 @@ footer {
   .btn {
       width: 8rem;
   }
+
+  .chart-control {
+    height: 50vh !important;
+}
 
 }
 
