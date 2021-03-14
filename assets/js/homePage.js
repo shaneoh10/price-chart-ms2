@@ -7,7 +7,7 @@ function getTesla(event) {
     $('#low').html('');
 
     $.when(
-        $.getJSON('https://api.twelvedata.com/quote?symbol=TSLA&apikey=d6cceea44f2c4640ba375bcfb65a4fc8')
+        $.getJSON('https://api.twelvedata.com/quote?symbol=TSLA &apikey=d6cceea44f2c4640ba375bcfb65a4fc8')
     ).then(
         function(response) {
 
