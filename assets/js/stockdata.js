@@ -26,8 +26,6 @@ function getStocks(event) {
     ).then(
         function(response1, response2, response3) {
 
-            console.log(response3);
-
             if (response3[0].status === 'error') {
                 console.log(response3[0]);
                 $('#loader-container').html('');
