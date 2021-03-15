@@ -10,7 +10,7 @@ function getStocks(event) {
 
     var stockSymbol = $('#stock-symbol').val();
     if (!stockSymbol) {
-        $('#stockName').html(`<h3>Please enter a stock symbol!</h3>`);
+        $('#stockName').html(`<h3 class="text-center mt-2">Please enter a stock symbol!</h3>`);
         return;
     }
 

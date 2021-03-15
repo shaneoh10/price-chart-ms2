@@ -120,6 +120,15 @@ footer {
     margin-bottom: 2rem;
 }
 
+.btn--interval {
+    background-color: #b1b1b1;
+}
+
+.btn-secondary:not(:disabled):not(.disabled).active,
+.show>.btn-secondary.dropdown-toggle { 
+    background-color: #286cfd;
+}
+
 .interval-buttons input {
     margin: 2rem 0 0 1.6rem;
 }
@@ -146,7 +155,8 @@ footer {
      align-items: center;
      justify-content: center;
 }
-.btn {
+.btn--go,
+.btn--contact {
     width: 10rem;
     margin: 1rem;
     border-radius: 1rem;
@@ -167,6 +177,11 @@ footer {
 .btn:active {
     background-color: #286cfd;
     color: #fafafa;
+}
+
+.btn--interval:hover,
+.btn--interval:active {
+    background-color: #5086fc;
 }
 
 .home-stock {
@@ -206,6 +221,7 @@ footer {
 }
 
 /************ CONTACT PAGE */
+
 .form-container, .details-container {
     padding: 3rem;
 }

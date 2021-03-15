@@ -74,19 +74,25 @@
             <button onclick="getCurrency()">Go!</button>
         </div>
         <div class="chart-container">
+            <div class="interval-buttons text-center">
+                <div class="btn-group btn-group-toggle text-center" data-toggle="buttons">
+                    <label class="btn btn-secondary btn--interval">
+                        <input type="radio" name="interval" id="1h" value="1h" checked> 1 Hour
+                    </label>
+                    <label class="btn btn-secondary btn--interval">
+                        <input type="radio" name="interval" id="1day" value="1day"> 1 day
+                    </label>
+                    <label class="btn btn-secondary btn--interval">
+                        <input type="radio" name="interval" id="1week" value="1week"> 1 week
+                    </label>
+                    <label class="btn btn-secondary btn--interval">
+                        <input type="radio" name="interval" id="1month" value="1month"> 1 month
+                    </label>
+                </div>
+            </div>
             <div id="stock-details">
                 <p id="currency-name"></p>
                 <p id="currency-price"></p>
-            </div>
-            <div class="interval-buttons text-center">
-                <input type="radio" id="1h" name="interval" value="1h">
-                <label for="1h">1 Hour</label>
-                <input type="radio" id="1day" name="interval" value="1day">
-                <label for="1day">1 Day</label>
-                <input type="radio" id="1week" name="interval" value="1week">
-                <label for="1week">1 Week</label>
-                <input type="radio" id="1month" name="interval" value="1month" checked>
-                <label for="1month">1 Month</label>
             </div>
             <div id="loader-container" class="text-center"></div>
             <div class="chart-control" id="chart-control">
