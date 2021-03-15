@@ -58,7 +58,8 @@
             <hr class="h--rule">
         </div>
         <div class="search-bar text-center">
-            <p>Select a currency pair from the dropdown menu below and click <i>Go!</i> to generate a price chart.</p>
+            <p>Select a currency pair from the dropdown menu below and click <i>Go!</i> to generate a price chart. The
+                chosen time interval is the length of time between each data point on the chart.</p>
             <select id="currency-pair">
                 <option value="EUR/USD" selected>EUR/USD</option>
                 <option value="EUR/GBP">EUR/GBP</option>
@@ -78,12 +79,14 @@
                 <p id="currency-price"></p>
             </div>
             <div class="interval-buttons text-center">
-                <input type="radio" id="1min" name="interval" value="1min">
-                <label for="1min">1 Min</label>
-                <input type="radio" id="1hour" name="interval" value="1h">
-                <label for="1hour">1 Hour</label>
-                <input type="radio" id="1day" name="interval" value="1day" checked>
+                <input type="radio" id="1h" name="interval" value="1h">
+                <label for="1h">1 Hour</label>
+                <input type="radio" id="1day" name="interval" value="1day">
                 <label for="1day">1 Day</label>
+                <input type="radio" id="1week" name="interval" value="1week">
+                <label for="1week">1 Week</label>
+                <input type="radio" id="1month" name="interval" value="1month" checked>
+                <label for="1month">1 Month</label>
             </div>
             <div id="loader-container" class="text-center"></div>
             <div class="chart-control" id="chart-control">
