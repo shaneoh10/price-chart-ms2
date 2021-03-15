@@ -15,7 +15,7 @@ function getCurrency(event) {
         </div>`);
 
     $.when(
-        $.getJSON(`https://api.twelvedata.com/time_series?symbol=${currencyPair}&interval=1min&apikey=d6cceea44f2c4640ba375bcfb65a4fc8`),
+        $.getJSON(`https://api.twelvedata.com/price?symbol=${currencyPair}&apikey=d6cceea44f2c4640ba375bcfb65a4fc8`),
         $.getJSON(`https://api.twelvedata.com/time_series?symbol=${currencyPair}&interval=${interval}&apikey=d6cceea44f2c4640ba375bcfb65a4fc8`)
     ).then(
         function (response1, response2) {
@@ -25,14 +25,14 @@ function getCurrency(event) {
                 $('#chart-control').html(
                     `<h4 class="text-center mt-4">Error: ${response2[0].message}</h4>`);
             } else {
-                $('#chart-control').html('<canvas id="myChart" maxwidth="100%" maxheight="100%"></canvas>');
+                $('#chart-control').html('<canvas id="myChart" width="100%" height="100%"></canvas>');
                 $('#loader-container').html('');
-                var stockName = response1[0].meta.symbol;
-                var stockPrice = response1[0].values[0].close;
-                var currency = response1[0].meta.currency_quote;
-                stockPrice = stockPrice.slice(0, -3);
-                $('#currency-name').html(stockName);
-                $('#currency-price').html(stockPrice + ' ' + currency);
+                var currencyName = response2[0].meta.symbol;
+                var currencyPrice = response1[0].price;
+                var currency = response2[0].meta.currency_quote;
+                currencyPrice =  currencyPrice.slice(0, -3);
+                $('#currency-name').html(currencyName);
+                $('#currency-price').html(currencyPrice + ' ' + currency);
 
                 var data = response2[0];
                 for (i = 0; i < data.values.length; i++) {

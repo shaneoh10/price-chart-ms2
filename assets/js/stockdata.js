@@ -32,7 +32,7 @@ function getStocks(event) {
                 $('#chart-control').html(
                     `<h4 class="text-center mt-4">Error: ${response3[0].message}</h4>`);
             } else {
-                $('#chart-control').html('<canvas id="myChart" maxwidth="100%" maxheight="100%"></canvas>');
+                $('#chart-control').html('<canvas id="myChart" width="100%" height="100%"></canvas>');
                 $('#loader-container').html('');
                 var stockName = response1[0].data[0].name;
                 var stockPrice = response2[0].price;
