@@ -20,23 +20,22 @@ function getStocks(event) {
         </div>`);
 
     $.when(
-        $.getJSON(`https://api.twelvedata.com/stocks?symbol=${stockSymbol}&apikey=d6cceea44f2c4640ba375bcfb65a4fc8`),
+        $.getJSON(`https://api.twelvedata.com/quote?symbol=${stockSymbol}&apikey=d6cceea44f2c4640ba375bcfb65a4fc8`),
         $.getJSON(`https://api.twelvedata.com/price?symbol=${stockSymbol}&apikey=d6cceea44f2c4640ba375bcfb65a4fc8`),
         $.getJSON(`https://api.twelvedata.com/time_series?symbol=${stockSymbol}&interval=${interval}&apikey=d6cceea44f2c4640ba375bcfb65a4fc8`)
     ).then(
         function(response1, response2, response3) {
 
             if (response3[0].status === 'error') {
-                console.log(response3[0]);
                 $('#loader-container').html('');
                 $('#chart-control').html(
                     `<h4 class="text-center mt-4">Error: ${response3[0].message}</h4>`);
             } else {
                 $('#chart-control').html('<canvas id="myChart" width="100%" height="100%"></canvas>');
                 $('#loader-container').html('');
-                var stockName = response1[0].data[0].name;
+                var stockName = response1[0].name;
                 var stockPrice = response2[0].price;
-                var currency = response1[0].data[0].currency;
+                var currency = response1[0].currency;
                 stockPrice = stockPrice.slice(0, -3);
 
                 $('#stockName').html(stockName);
@@ -81,8 +80,50 @@ function getStocks(event) {
                             }]
                         }
                     }
-                })
-            }
+                });
 
-        })
+                function stockTable(response1) {
+                    var tableData = response1[0];
+                    var tableName = tableData.name;
+                    var tableSymbol = tableData.symbol;
+                    var tableDate = tableData.datetime;
+                    var tableExchange = tableData.exchange;
+                    var tableOpen = tableData.open.slice(0, -3);
+                    var tableClose = tableData.close.slice(0, -3);
+                    var tableHigh = tableData.high.slice(0, -3);
+                    var tableLow = tableData.low.slice(0, -3);
+                    var tableVolume = tableData.volume;
+                    var fiftyTwoHigh = tableData.fifty_two_week.high.slice(0, -3);
+
+                    $('#table').html(`<div class="container" id="table">
+            <table class="table table-dark">
+                <tbody class="text-light">
+                    <tr>
+                        <td class="remove-border" id="table-name">${tableName}</td>
+                        <td class="remove-border" id="table-symbol">${tableSymbol}</td>
+                    </tr>
+                    <tr>
+                        <td id="table-date">${tableDate}</td>
+                        <td id="table-exchange">${tableExchange}</td>
+                    </tr>
+                    <tr>
+                        <td>Open: <span id="table-open">${tableOpen}</span></td>
+                        <td>Close: <span id="table-close">${tableClose}</span></td>
+                    </tr>
+                    <tr>
+                        <td>High: <span id="table-high">${tableHigh}</span></td>
+                        <td>Low: <span id="table-low">${tableLow}</span></td>
+                    </tr>
+                    <tr>
+                        <td>Volume: <span id="table-volume">${tableVolume}</span></td>
+                        <td>52 Week High: <span id="fiftytwo-high">${fiftyTwoHigh}</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>`)
+                }
+
+                stockTable(response1);
+            }
+        });
 }
