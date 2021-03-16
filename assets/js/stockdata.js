@@ -10,7 +10,9 @@ function getStocks(event) {
 
     var stockSymbol = $('#stock-symbol').val();
     if (!stockSymbol) {
-        $('#stockName').html(`<h3 class="text-center mt-2">Please enter a stock symbol!</h3>`);
+        $('#stockName').html(`<h3 class="text-center mt-5">Please enter a stock symbol!</h3>`);
+        $('#table').html('');
+        $('#chart-control').html('');
         return;
     }
 
@@ -25,7 +27,36 @@ function getStocks(event) {
         $.getJSON(`https://api.twelvedata.com/time_series?symbol=${stockSymbol}&interval=${interval}&apikey=d6cceea44f2c4640ba375bcfb65a4fc8`)
     ).then(
         function(response1, response2, response3) {
+            var tableData = response1[0];
 
+            function stockTable(response1) {
+                $('#table').html(`<div class="container" id="table">
+            <table class="table table-dark">
+                <tbody class="text-light">
+                    <tr>
+                        <td class="remove-border" id="table-name">${tableData.name}</td>
+                        <td class="remove-border" id="table-symbol">${tableData.symbol}</td>
+                    </tr>
+                    <tr>
+                        <td id="table-date">${tableData.datetime}</td>
+                        <td id="table-exchange">${tableData.exchange}</td>
+                    </tr>
+                    <tr>
+                        <td>Open: <span id="table-open">${tableData.open.slice(0, -3)}</span></td>
+                        <td>Close: <span id="table-close">${tableData.close.slice(0, -3)}</span></td>
+                    </tr>
+                    <tr>
+                        <td>High: <span id="table-high">${tableData.high.slice(0, -3)}</span></td>
+                        <td>Low: <span id="table-low">${tableData.low.slice(0, -3)}</span></td>
+                    </tr>
+                    <tr>
+                        <td>Volume: <span id="table-volume">${tableData.volume}</span></td>
+                        <td>52 Week High: <span id="fiftytwo-high">${tableData.fifty_two_week.high.slice(0, -3)}</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>`);
+            }
             if (response3[0].status === 'error') {
                 $('#loader-container').html('');
                 $('#chart-control').html(
@@ -81,48 +112,6 @@ function getStocks(event) {
                         }
                     }
                 });
-
-                function stockTable(response1) {
-                    var tableData = response1[0];
-                    var tableName = tableData.name;
-                    var tableSymbol = tableData.symbol;
-                    var tableDate = tableData.datetime;
-                    var tableExchange = tableData.exchange;
-                    var tableOpen = tableData.open.slice(0, -3);
-                    var tableClose = tableData.close.slice(0, -3);
-                    var tableHigh = tableData.high.slice(0, -3);
-                    var tableLow = tableData.low.slice(0, -3);
-                    var tableVolume = tableData.volume;
-                    var fiftyTwoHigh = tableData.fifty_two_week.high.slice(0, -3);
-
-                    $('#table').html(`<div class="container" id="table">
-            <table class="table table-dark">
-                <tbody class="text-light">
-                    <tr>
-                        <td class="remove-border" id="table-name">${tableName}</td>
-                        <td class="remove-border" id="table-symbol">${tableSymbol}</td>
-                    </tr>
-                    <tr>
-                        <td id="table-date">${tableDate}</td>
-                        <td id="table-exchange">${tableExchange}</td>
-                    </tr>
-                    <tr>
-                        <td>Open: <span id="table-open">${tableOpen}</span></td>
-                        <td>Close: <span id="table-close">${tableClose}</span></td>
-                    </tr>
-                    <tr>
-                        <td>High: <span id="table-high">${tableHigh}</span></td>
-                        <td>Low: <span id="table-low">${tableLow}</span></td>
-                    </tr>
-                    <tr>
-                        <td>Volume: <span id="table-volume">${tableVolume}</span></td>
-                        <td>52 Week High: <span id="fiftytwo-high">${fiftyTwoHigh}</span></td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>`)
-                }
-
                 stockTable(response1);
             }
         });
