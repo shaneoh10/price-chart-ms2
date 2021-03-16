@@ -116,3 +116,5 @@ function getStocks(event) {
             }
         });
 }
+
+$(document).ready(getStocks);

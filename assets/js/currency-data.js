@@ -77,3 +77,5 @@ function getCurrency(event) {
             }
         })
 }
+
+$(document).ready(getCurrency);
