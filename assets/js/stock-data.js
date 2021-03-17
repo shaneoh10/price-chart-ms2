@@ -28,7 +28,7 @@ function getStocks(event) {
     ).then(
         function(response1, response2, response3) {
             var tableData = response1[0];
-
+            
             function stockTable(response1) {
                 $('#table').html(`<div class="container" id="table">
             <table class="table table-dark">
