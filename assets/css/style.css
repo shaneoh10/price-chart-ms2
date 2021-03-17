@@ -109,6 +109,18 @@ footer {
     background-color: #d6d4d4;
 }
 
+#currency-name,
+#stock-name {
+    margin-top: 1rem;
+}
+
+#currency-name,
+#currency-price,
+#stock-name,
+#stock-price {
+    font-size: 1.2rem
+}
+
 .chart-container {
     position: relative;
     margin: auto;
@@ -274,8 +286,15 @@ footer {
 
 @media screen and (min-width: 992px) {
   html, body {
-      font-size: 18px;
+    font-size: 18px;
   }
+
+  #currency-name,
+  #currency-price,
+  #stock-name,
+  #stock-price {
+    font-size: 1.6rem;
+}
 
 }
 

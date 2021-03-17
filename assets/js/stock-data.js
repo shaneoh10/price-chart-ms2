@@ -3,14 +3,14 @@ function getStocks(event) {
     var chartPrice = [];
     var chartTime = [];
 
-    $('#stockName').html('');
-    $('#stockPrice').html('');
+    $('#stock-name').html('');
+    $('#stock-price').html('');
 
     var interval = $('input[name="interval"]:checked').val();
 
     var stockSymbol = $('#stock-symbol').val();
     if (!stockSymbol) {
-        $('#stockName').html(`<h3 class="text-center mt-5">Please enter a stock symbol!</h3>`);
+        $('#stock-name').html(`<h3 class="text-center mt-5">Please enter a stock symbol!</h3>`);
         $('#table').html('');
         $('#chart-control').html('');
         return;
@@ -69,8 +69,8 @@ function getStocks(event) {
                 var currency = response1[0].currency;
                 stockPrice = stockPrice.slice(0, -3);
 
-                $('#stockName').html(stockName);
-                $('#stockPrice').html(stockPrice + ' ' + currency);
+                $('#stock-name').html(stockName);
+                $('#stock-price').html(stockPrice + ' ' + currency);
 
                 var data = response3[0];
                 for (i = 0; i < data.values.length; i++) {
