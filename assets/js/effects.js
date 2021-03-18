@@ -9,3 +9,5 @@ $(document).click(function () {
 // https://scrollrevealjs.org/guide/whats-new.html
 
 ScrollReveal().reveal('.chart-box', { duration: 2000, delay: 100 });
+
+
