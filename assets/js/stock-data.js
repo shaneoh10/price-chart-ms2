@@ -26,9 +26,9 @@ function getStocks(event) {
         $.getJSON(`https://api.twelvedata.com/price?symbol=${stockSymbol}&apikey=d6cceea44f2c4640ba375bcfb65a4fc8`),
         $.getJSON(`https://api.twelvedata.com/time_series?symbol=${stockSymbol}&interval=${interval}&apikey=d6cceea44f2c4640ba375bcfb65a4fc8`)
     ).then(
-        function(response1, response2, response3) {
+        function (response1, response2, response3) {
             var tableData = response1[0];
-            
+
             function stockTable(response1) {
                 $('#table').html(`<div class="container" id="table">
             <table class="table table-dark">
@@ -50,6 +50,10 @@ function getStocks(event) {
                         <td>Low: <span id="table-low">${tableData.low.slice(0, -3)}</span></td>
                     </tr>
                     <tr>
+                        <td>Previous close: <span id="table-high">${tableData.previous_close.slice(0, -3)}</span></td>
+                        <td>Change: <span id="table-low">${tableData.percent_change.slice(0, -1)}%</span></td>
+                    </tr>
+                    <tr>
                         <td>Volume: <span id="table-volume">${tableData.volume}</span></td>
                         <td>52 Week High: <span id="fiftytwo-high">${tableData.fifty_two_week.high.slice(0, -3)}</span></td>
                     </tr>
@@ -61,6 +65,7 @@ function getStocks(event) {
                 $('#loader-container').html('');
                 $('#chart-control').html(
                     `<h4 class="text-center mt-4">Error: ${response3[0].message}</h4>`);
+                $('#table').html('');
             } else {
                 $('#chart-control').html('<canvas id="myChart" width="100%" height="100%"></canvas>');
                 $('#loader-container').html('');
