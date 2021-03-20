@@ -15,7 +15,7 @@ html, body {
      background-size: cover;
 }
  #stocks, #forex, #crypto, #contact {
-     height: 100vh;
+     height: 100%;
      color: #000;
 }
  .main-heading {
@@ -76,7 +76,9 @@ html, body {
 
 /************ CHARTS */
  .chart-control {
-     height: 45vh !important;
+    max-width: 100%;
+    height: 45vh;
+    margin: 0 auto;
 }
  .h--rule {
      width: 4rem;
@@ -92,7 +94,6 @@ html, body {
  .chart-container {
      position: relative;
      margin: auto;
-     height: 50vh;
      width: 80vw;
 }
  .search-bar {
@@ -222,6 +223,7 @@ html, body {
          font-size: 18px;
     }
 }
+
  @media screen and (min-width: 1400px) {
      .navbar--logo {
          margin-left: 5rem;
