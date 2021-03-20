@@ -19,9 +19,9 @@ function getCurrency(event) {
         $.getJSON(`https://api.twelvedata.com/price?symbol=${currencyPair}&apikey=d6cceea44f2c4640ba375bcfb65a4fc8`),
         $.getJSON(`https://api.twelvedata.com/time_series?symbol=${currencyPair}&interval=${interval}&apikey=d6cceea44f2c4640ba375bcfb65a4fc8`)
     ).then(
-        function (response, response1, response2) {
-            var tableData = response[0];
-            function stockTable(response) {
+        function (response1, response2, response3) {
+            var tableData = response1[0];
+            function stockTable(response1) {
                 $('#table').html(`<div class="container" id="table">
             <table class="table table-dark">
                 <tbody class="text-light">
@@ -49,23 +49,23 @@ function getCurrency(event) {
             </table>
         </div>`);
             }
-            if (response2[0].status === 'error') {
-                console.log(response2[0].code);
+            if (response3[0].status === 'error') {
+                console.log(response3[0].code);
                 $('#loader-container').html('');
                 $('#chart-control').html(
-                    `<h4 class="text-center mt-4">Error: ${response2[0].message}</h4>`);
+                    `<h4 class="text-center mt-4">Error: ${response3[0].message}</h4>`);
                 $('#table').html('');
             } else {
                 $('#chart-control').html('<canvas id="myChart" width="100%" height="100%"></canvas>');
                 $('#loader-container').html('');
-                var currencyName = response2[0].meta.symbol;
-                var currencyPrice = response1[0].price;
-                var currency = response2[0].meta.currency_quote;
+                var currencyName = response3[0].meta.symbol;
+                var currencyPrice = response2[0].price;
+                var currency = response3[0].meta.currency_quote;
                 currencyPrice = currencyPrice.slice(0, -3);
                 $('#currency-name').html(currencyName);
                 $('#currency-price').html(currencyPrice + ' ' + currency);
 
-                var data = response2[0];
+                var data = response3[0];
                 for (i = 0; i < data.values.length; i++) {
                     chartPrice.push(data.values[i].open);
                     chartTime.push(data.values[i].datetime);
@@ -105,9 +105,9 @@ function getCurrency(event) {
                         }
                     }
                 });
-                stockTable(response);
+                stockTable(response1);
             }
-        })
+        });
 }
 
 $(document).ready(getCurrency);
