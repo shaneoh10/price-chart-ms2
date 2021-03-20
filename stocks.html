@@ -62,7 +62,9 @@
         <div class="search-bar text-center mx-4">
             <p>Enter a stock symbol into the search bar below and click <i>Go!</i> to generate a price chart. The chosen
                 time interval is the amount of time between each data point on the chart.</p>
-            <input type="text" id="stock-symbol" value="MSFT">
+            <label for="stock-symbol">
+                <input name="stock-symbol" type="text" id="stock-symbol" value="MSFT">
+            </label>
             <button onclick="getStocks()">Go!</button>
         </div>
         <div class="chart-container">
