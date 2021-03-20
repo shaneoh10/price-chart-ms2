@@ -1,5 +1,7 @@
 # Website for Price Chart
 
+![Price Chart](assets/documents/mockups/pricechart-mockup.png)
+
 ## Code Institute Milestone Project 2 : Interactive Front End Development
 
 Price Chart is a website designed to provide users with the ability to search for real-time and historical data for stocks, foreign exchange and crypto-currency prices and view this data on a chart. The website will be easy to navigate and the information will be simple to comprehend by users who are familiar with and also those who are not so familiar with financial data. 
@@ -47,3 +49,21 @@ I have structuted the website with:
 
 I designed wireframes for mobile, tablet and desktop using Balsamiq. These wireframes can be viewed [here.](https://github.com/shaneoh10/price-chart-ms2/tree/master/assets/documents/wireframes)
 
+## Surface
+
+#### Colours
+
+I chose a neutral colour palette for the website so as not to distract the users from the information that they are looking for. The main buttons and charts are blue which provides a good contrast from the neutral palette and makes it easier for users to find their way around the site and read the chart data.
+
+* #FAFAFA - Cultured (off-white)
+* #F8F8F8 - Cultured (off-white)
+* #242424 - Eerie Black
+* #5086FC - United Nations Blue
+* #D6D4D4 - Light Gray
+* #286CFD - Ultramarine Blue
+* #B1B1B1 - Silver Chalice
+* #EBEBEB - Platinum
+
+#### Typography 
+
+I chose 'Cabin' as the font for the project as it is easy to read and it provides users with a sense of professionalism about the website.
