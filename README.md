@@ -61,9 +61,51 @@ I chose a neutral colour palette for the website so as not to distract the users
 * #5086FC - United Nations Blue
 * #D6D4D4 - Light Gray
 * #286CFD - Ultramarine Blue
-* #B1B1B1 - Silver Chalice
 * #EBEBEB - Platinum
 
 #### Typography 
 
 I chose 'Cabin' as the font for the project as it is easy to read and it provides users with a sense of professionalism about the website.
+
+## Features 
+
+#### Across all pages:
+
+* The navbar will be visible at the top of the page across all pages of the website. The navbar has the Price Chart logo on the left and there are three navigation items on the right-hand side: Home, Charts & Contact. The Charts item has a dropdown menu with links to travel to three pages: Stocks, Forex & Crypto. The navbar collapses into a hamburger icon on smaller screens.
+* The footer will be visible at the bottom of the page across all pages of the website. The footer contains the pricechart logo, a copyright notice, social media links, a navigation menu and a list of contact details. I decided to include all of this information in the footer so that it can be accessed by users from any page of the website and it makes the website feel more professional and legitimate as there is no information being hidden from users.
+
+#### Home page: 
+
+##### Header:
+* There is a background image of a newspaper containing charts and financial data. With this high-quality image it will immediately become apparent to users what the subject of the website is and it will give users a first impression of a professional service. The image also ties in with the neutral colour palette chosen for the site.
+* A main heading containing the company slogan and sub-heading providing a brief description of the service, quickly draw user attention to this area of the page.
+* Two buttons, a Go! call-to-action and a Contact Us button to encourage users to either browse the website and use to the service or contact the company to learn more about the service or raise any issues. The go button is a contrasting blue colour to attract user attention. Both buttons change colour on hover to provide feedback to the user.
+* On larger screen sizes there is a table containing real stock data on Tesla Inc which is fetched from an API. This is to show users an example of the type of data that is available on the website.
+
+##### Chart Section:
+* This section contains three cards that contain a brief description of each of the financial charts that are available on the website (Stocks, Forex, Crypto) and a button to go to each page. The purpose of this section is to provide users with less of an understanding of the financial markets a bit of information on the charts that they will be looking at.
+
+#### Stocks page: 
+* This page contains a description on how to generate a chart, a search bar to enter a stock symbol and four buttons to choose the desired time interval of the chart. The chart is then generated when users press the Go! button next to the search bar. When the user presses the Go button the chart is displayed on the page below the time interval buttons. Below the chart a table containing stock data on the company that the user has searched for is displayed. All data in the chart and table is real data fetched from an API.
+* A loading gif is displayed when a chart is being generated to provide users with feedback that the page is loading.
+* If the user tries to generate a chart without entering a stock symbol they will be prompted to enter a symbol.
+* Any errors that occur when generating a chart will be displayed on screen to the user. (invalid symbol, too many API requests etc.)
+* To improve user experience I decided to program the chart to load when the page is opened with a default value (Microsoft Corp) so that users are not greeted with an empty page.
+
+#### Forex page: 
+* This page contains a description on how to generate a chart, a dropdown menu to choose a currency pair and four buttons to choose the desired time interval of the chart. The chart is then generated when users press the Go! button next to the search bar. When the user presses the Go button the chart is displayed on the page below the time interval buttons. Below the chart a table containing market data on the currency pair that the user has chosen is displayed. All data in the chart and table is real data fetched from an API.
+* A loading gif is displayed when a chart is being generated to provide users with feedback that the page is loading.
+* Any errors that occur when generating a chart will be displayed on screen to the user. (invalid symbol, too many API requests etc.)
+* To improve user experience I decided to program the chart to load when the page is opened with a default value (EUR/USD) so that users are not greeted with an empty page.
+
+#### Crypto page: 
+* This page contains a description on how to generate a chart, a dropdown menu to choose a cryptocurrency and four buttons to choose the desired time interval of the chart. The chart is then generated when users press the Go! button next to the search bar. When the user presses the Go button the chart is displayed on the page below the time interval buttons. Below the chart a table containing market data on the cryptocurrency that the user has chosen is displayed. All data in the chart and table is real data fetched from an API.
+* A loading gif is displayed when a chart is being generated to provide users with feedback that the page is loading.
+* Any errors that occur when generating a chart will be displayed on screen to the user. (invalid symbol, too many API requests etc.)
+* To improve user experience I decided to program the chart to load when the page is opened with a default value (BTC- Bitcoin) so that users are not greeted with a blank page.
+
+#### Contact page: 
+* There is a contact form which is set up with email.js so that users can send a message with any questions or concerns they have about the website.
+* When the user presses the send button a loader gif is displayed and when the message has successfully sent a message providing that feedback is displayed.
+* On larger screens a list of contact details is displayed on screen. The email address and phone number on display have anchors attached to open up your email or phone when clicked to make it easier to get in contact.
+
