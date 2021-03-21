@@ -2,11 +2,29 @@
 
 [Back to README.md](README.md)
 
+## Chrome Devloper Tools
+
 Throughout the development of the project I used Chrome developer tools to assist with the design when making any changes to HTML and CSS. It is a great tool to assist deciding font sizing, margin, padding etc. before commiting any changes. As it was a mobile first design, by testing with Chrome Developer Tools I was able to add media queries to improve the experience on larger screen sizes. I am happy with how the website turned out I think that it is clear and easy to read on mobile, tablet and desktop devices. Although the website works on all device sizes, I would have to say that it performs better on larger screens as the charts are not as compacted and the data is easier to read.
 
 When I first built the pages with the charts I was having issues with the chart overflowing into the footer. After some testing with Chrome developer tools I found that the issue was that I had set the main section to a fixed height of 100vh which did not allow the section to expand to allow space for the chart and table. By setting the height to min-height 100vh I was able to resolve this issue.
 
 One criticism I have that I found while testing is that with tablet devices (iPad, iPad Pro) there is some whitespace on the contact page due to the aspect ratio of the iPad screens, but overall I am very happy with the project.
+
+#### Lighthouse
+
+I ran tests across all of the pages for desktop and mobile with lighthouse. Here is an example of some of the errors that were found in these tests:
+
+![lighthouse-1](assets/documents/testing-images/lighthouse1.PNG)
+
+There were errors similar to this found across all the pages and I was able to examine and fix these errors. Below are the results after fixing these errors: 
+
+![lighthouse-2](assets/documents/testing-images/lighthouse2.PNG)
+
+I ran tests again across all pages for mobile and desktop and although the desktop results all came back ok, there were performance errors present in the mobile tests. An example of these errors is below: 
+
+![lighthouse-3](assets/documents/testing-images/lighthouse3.PNG)
+
+After examining these errors I decided to take no further action as these are external resources that are causing performance issues and are therefore out of my control.
 
 ## Validation
 
