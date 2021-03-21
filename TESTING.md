@@ -22,5 +22,23 @@ When testing the CSS in the validator the following errors were found:
 
 ![W3C-css](assets/documents/testing-images/w3c-css.png)
 
-These errors are in the Bootstrap CDN and are therefore out of my control. I ran my own CSS through the tester via direct input and there were no errors found.
+These errors are in the Bootstrap CDN and are therefore out of my control. I ran my own CSS through the validator via direct input and there were no errors found.
 
+## Web Browser and Device Testing
+
+I tested the functionality of the website across a number of browsers and devices to verify that the website is responsive and the code is supported across different browsers.
+
+- Browsers tested:
+    - Google Chrome
+    - Firefox
+    - Brave 
+    - Microsoft Edge
+    - Samsung Browser
+
+- Devices tested: 
+    - Laptop
+    - Desktop
+    - Samsung Galaxy S20
+    - Xiaomi Mi 9
+
+All website features worked across all browsers and devices tested and the website was responsive on all devices.
