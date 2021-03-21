@@ -19,7 +19,7 @@ body {
 #forex,
 #crypto,
 #contact {
-    height: 100%;
+    min-height: 100vh;
     color: #000;
 }
 .main-heading {
@@ -256,9 +256,6 @@ footer {
     }
     .chart-control {
         height: 50vh !important;
-    }
-    #contact {
-        height: 75vh;
     }
 }
 @media screen and (min-width: 992px) {
