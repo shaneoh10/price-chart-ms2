@@ -128,7 +128,7 @@ I chose 'Cabin' as the font for the project as it is easy to read and it provide
 
 ## Testing
 
-Information on testing can be found in [TESTING.md](#)
+Information on testing can be found in [TESTING.md](TESTING.md)
 
 ## Deployment
 
