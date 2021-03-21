@@ -8,7 +8,9 @@ When I first built the pages with the charts I was having issues with the chart 
 
 One criticism I have that I found while testing is that with tablet devices (iPad, iPad Pro) there is some whitespace on the contact page due to the aspect ratio of the iPad screens, but overall I am very happy with the project.
 
-## W3C Validator Testing
+## Validation
+
+#### W3C Validator
 
 I ran validator tests throughout the project for the HTML and CSS with the W3C Validator. See below some of the errors that were caught.
 
@@ -23,6 +25,14 @@ When testing the CSS in the validator the following errors were found:
 ![W3C-css](assets/documents/testing-images/w3c-css.png)
 
 These errors are in the Bootstrap CDN and are therefore out of my control. I ran my own CSS through the validator via direct input and there were no errors found.
+
+#### JSHint
+
+I ran all the JavaScript code through JSHint and I found a few errors which I was able to fix. 
+
+- There were multiple counts of 'missing semicolon' which was easily resolved.
+- There was another warning as follows : 'Function declarations should not be placed in blocks. Use a function expression or move the statement to the top of the outer function.' I researched the problem and refactored the code to remove this warning.
+- There is another warning that remains present across all JavaScript files: 'template literal syntax is only available in ES6(use esversion:6)'. This can be ignored as Javascript version ES6 is used in the project.
 
 ## Web Browser and Device Testing
 
@@ -42,3 +52,6 @@ I tested the functionality of the website across a number of browsers and device
     - Xiaomi Mi 9
 
 All website features worked across all browsers and devices tested and the website was responsive on all devices.
+
+## Testing User Stories
+
