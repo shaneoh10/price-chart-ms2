@@ -257,6 +257,9 @@ footer {
     .chart-control {
         height: 50vh !important;
     }
+    #contact {
+        height: 75vh;
+    }
 }
 @media screen and (min-width: 992px) {
     html,
