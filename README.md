@@ -109,3 +109,19 @@ I chose 'Cabin' as the font for the project as it is easy to read and it provide
 * When the user presses the send button a loader gif is displayed and when the message has successfully sent a message providing that feedback is displayed.
 * On larger screens a list of contact details is displayed on screen. The email address and phone number on display have anchors attached to open up your email or phone when clicked to make it easier to get in contact.
 
+## Technologies Used
+* HTML5 - This is the main language of the website content
+* CSS3 - This is used to style the web pages
+* Bootstrap v4.6 - The project uses Bootstrap elements to help with form and design
+* JavaScript, jQuery - Used to fetch API data, parse JSON data, implement the functionality of the charts, tables and contact form and other visual effects
+* [ScrollReveal](https://scrollrevealjs.org/) - Used for the divs appear on scroll down effect on the home page
+* [Chart.js](https://www.chartjs.org/) - Used to generate and display the charts for the website
+* [TwelveData](https://twelvedata.com/) - API used to get market data used throughout the website
+* GitHub - Used to store the code and host the live website
+* Gitpod - This is the IDE I used for the project
+* Git - Used within Gitpod as the version control system
+* Chrome Developer Tools - Used within Google Chrome to inspect the web pages. This is helpful when designing responsive features and troubleshooting bugs.
+* Balsamiq - I created the project wireframes with this software
+* Google Fonts - Used to import the font for the project
+* [Font Awesome](https://fontawesome.com/) - Used to import icons
+* [Techsini](https://techsini.com/) - Used this website to generate the multi-device website mockup
