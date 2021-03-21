@@ -1,4 +1,4 @@
-function getStocks(event) {
+function getStocks() {
 
     var chartPrice = [];
     var chartTime = [];
@@ -29,7 +29,7 @@ function getStocks(event) {
         function (response1, response2, response3) {
             var tableData = response1[0];
 
-            function stockTable(response1) {
+            function stockTable() {
                 $('#table').html(`<div class="container" id="table">
             <table class="table table-dark">
                 <tbody class="text-light">

@@ -1,14 +1,15 @@
-function getTesla(event) {
+function getTesla() {
 
-    $('#table').html('<img src="assets/images/loader.gif" alt="loading..."/>>');
+	$('#table').html('<img src="assets/images/loader.gif" alt="loading..."/>>');
 
-    $.when(
-        $.getJSON('https://api.twelvedata.com/quote?symbol=TSLA&apikey=d6cceea44f2c4640ba375bcfb65a4fc8')
-    ).then(
-        function (response) {
-            var tableData = response;
-            function stockTable(response) {
-                $('#table').html(`<div class="container" id="table">
+	$.when(
+		$.getJSON('https://api.twelvedata.com/quote?symbol=TSLA&apikey=d6cceea44f2c4640ba375bcfb65a4fc8')
+	).then(
+		function(response) {
+			var tableData = response;
+
+			function stockTable() {
+				$('#table').html(`<div class="container" id="table">
             <table class="table table-dark">
                 <tbody class="text-light">
                     <tr>
@@ -34,15 +35,15 @@ function getTesla(event) {
                 </tbody>
             </table>
         </div>`);
-            }
-            if (response.status === 'error') {
-                console.log(response.code);
-                $('#table').html(
-                    `Error: ${response.message}`);
-            } else {
-                stockTable(response);
-            }
-        });
+			}
+			if (response.status === 'error') {
+				console.log(response.code);
+				$('#table').html(
+					`Error: ${response.message}`);
+			} else {
+				stockTable(response);
+			}
+		});
 }
 
 $(document).ready(getTesla);
@@ -50,4 +51,7 @@ $(document).ready(getTesla);
 // Divs appear on scroll down
 // https://scrollrevealjs.org/guide/whats-new.html
 
-ScrollReveal().reveal('.chart-box', { duration: 2000, delay: 100 });
+ScrollReveal().reveal('.chart-box', {
+	duration: 2000,
+	delay: 100
+});
