@@ -55,3 +55,39 @@ All website features worked across all browsers and devices tested and the websi
 
 ## Testing User Stories
 
+#### I want to be able to instinctively navigate the website to efficienty find the required information
+- As the user scrolls through the page the information is displayed neatly and there are multiple buttons to take the user to the desired section.
+- User can instantly go to any page of the website by clicking the link on the navbar.
+- If the user scrolls to the bottom of the page there is another menu where the user can click a link to go to any page of the website.
+
+#### I want to be able to understand what the site is about and how it works
+- The main heading and sub heading on the home page give the user a brief description of the services provided by the website.
+- The charts section on the home page gives users a description of the three markets covered by the website.
+- At the top of each chart page(stocks, forex, crypto) there is a guide which tells the user how to generate a price chart.
+
+#### I want to easily search for and view price charts for stocks, foreign exchange and crypto-currencies
+- From the home page users are easily directed to the stocks, forex and crypto pages via the navbar or buttons in the charts section.
+- On the stocks page there is a search bar where users can enter the stock symbol of their choice and generate a chart.
+- On the forex page there is a dropdown menu where the user can choose from a list of popular currency pairs and generate a chart.
+- On the crypto page there is a dropdown menu where the user can choose from a list of popular cryptocurrencies and generate a chart.
+- I tested the price charts for each page to verify that the search bar and drop down menus work and all are working ok. 
+- If no stock symbol is entered into the search bar an error message appears prompting the user to enter a stock symbol, this has been tested and is working.
+- Any errors from the API are also displayed on screen to give the user feedback as to why the chart is not working.(incorrect symbol, API call limit etc.) I tested this by entering incorrect symbols and by generating charts in quick succession and it is working ok.
+
+#### I want to be able to choose different time intervals on the price charts
+- On each chart page there are four buttons below the search bar or dropdown menu which allow the user to choose a time interval for the chart.
+- All time intervals have been tested on each page and are working correctly.
+
+#### I want to be able to view the website on various devices (mobile, tablet, desktop)
+- The website has been tested on multiple devices and tested for responsiveness in Chrome developer tools so the users should be able to view the website on a variety of devices.
+
+#### I want to be able to easily contact price chart with any questions or issues I am have regarding the website
+- On the contact page the user can fill out form with name, email and their message.
+- When the user clicks send to submit the form, form will only send if name field is filled, email is in correct format and message field is filled.
+- I have tested and verified the above and also verified that the email is received to my email address as programmed by email.js
+
+![test-email](assets/documents/testing-images/test-email.PNG)
+
+#### I want to be easily directed to any social media channels to remain up to date with price chart
+- The social media icons are cleary displayed in the footer of the website.
+- I tested each icon individually to verify that when clicked it opens up the correct social media website in a new tab.
