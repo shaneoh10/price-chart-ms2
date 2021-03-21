@@ -125,3 +125,57 @@ I chose 'Cabin' as the font for the project as it is easy to read and it provide
 * Google Fonts - Used to import the font for the project
 * [Font Awesome](https://fontawesome.com/) - Used to import icons
 * [Techsini](https://techsini.com/) - Used this website to generate the multi-device website mockup
+
+## Testing
+
+Information on testing can be found in [TESTING.md](#)
+
+## Deployment
+
+I deployed the Price Chart website on GitHub using the following setup:
+1. To set up the initial repository I used the [Code Institute Template.](https://github.com/Code-Institute-Org/gitpod-full-template) I clicked on "use this template" and entered price-chart-ms2 as the repository name and set it to public.
+2. In the new coffee box repository I clicked on the GitPod button to open the project up as a new GitPod workspace.
+3. Throughout the project I saved all my code to Git by typing `git add .` into the terminal in the GitPod workspace.
+4. To commit the code to git I used the command  `git commit -m "add comment here" -a `
+5. Using Git I then used the command `git push` to push all the committed code to my GitHub repository at [https://github.com/shaneoh10/price-chart-ms2](https://github.com/shaneoh10/price-chart-ms2)
+6. Opened the settings tab in the repository.
+7. Scrolled down to "Github Pages" section in settings.
+8. Selected "main" branch and "root" folder and pressed "Save" to deploy project to GitHub pages. Website is now live.
+9. Clicked on the new link provided to view the live website. [https://shaneoh10.github.io/price-chart-ms2/](https://shaneoh10.github.io/price-chart-ms2/)
+10. The live website is automatically updated every time a new commit is pushed to the project repository.
+
+The project can be downloaded as a .zip file by clicking on the "Code" button in the project repository and then clicking "Download ZIP". 
+
+Alternatively the project can be cloned by entering `git clone git@github.com:shaneoh10/price-chart-ms2.git` in the terminal. 
+
+More information on cloning the project can be found [here](https://docs.github.com/en/free-pro-team@latest/github/creating-cloning-and-archiving-repositories/cloning-a-repository).
+
+## Credits 
+
+#### Code:
+* The bootstrap navbar was copied from [here](https://getbootstrap.com/docs/4.6/components/navbar/) and edited to suit my project
+* The bootstrap time interval radio buttons were copied from [here](https://getbootstrap.com/docs/4.6/components/buttons/) and edited to suit my project
+* The bootstrap contact form was copied from [here](https://getbootstrap.com/docs/4.6/components/forms/) and edited to suit my project
+* Auto close navbar on click outside navbar - code credit to [this post](https://mdbootstrap.com/support/general/auto-close-navbar-when-click-on-link-responsive-mode/) on mdbootstrap.com. Edited code to suit project.
+* Email.js code was copied from Code Institute UCD Resume walkthrough project and edited to suit my project
+* Chart.js code to generate chart was copied from [here](https://www.chartjs.org/docs/latest/) and documentation was used to edit chart for my project
+* I used the TwelveData API documentation found [here](https://twelvedata.com/docs#getting-started) to implement the correct code for the API requests on my website
+* I copied the code and used the documentation found [here](https://scrollrevealjs.org/guide/hello-world.html) to set up the scroll reveal effect on the home page
+* Credit to Code Institute's Whiskey Drop walkthrough project for the HTML & CSS I used for the opaque overlay on the home page
+
+#### Photos: 
+* Home page - [Unsplash - Markus Spiske @markusspiske](https://unsplash.com/@markusspiske)
+* Loader gif - [Icons8.com](https://icons8.com/preloaders)
+
+#### Content: 
+
+The descriptions on the home page were provided by wikipedia.
+* [Stock - Wikipedia](https://en.wikipedia.org/wiki/Stock)
+* [Forex - Wikipedia](https://en.wikipedia.org/wiki/Foreign_exchange_market)
+* [Crypto - Wikipedia](https://en.wikipedia.org/wiki/Cryptocurrency)
+
+All other written content across the website was written by myself.
+
+## Acknowledgements
+
+I would like to thank my mentor Spencer Barriball for his help and guidance throughout the project. I would also like to thank Code Institute and the Slack community for providing me with ideas and inspiration on to how to approach this project.
