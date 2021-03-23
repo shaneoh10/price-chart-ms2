@@ -17,6 +17,7 @@ function sendMail(contactForm) {
             },
             function(error) {
                 console.log('FAILED', error);
+                document.getElementById('form').innerHTML = `<h2 class="text-center">Error sending message, please try again.</h2>`;
             });
 
     return false;

@@ -51,7 +51,6 @@ function getCurrency() {
         </div>`);
 			}
 			if (response3[0].status === 'error') {
-				console.log(response3[0].code);
 				$('#loader-container').html('');
 				$('#chart-control').html(
 					`<h4 class="text-center mt-4">Error: ${response3[0].message}</h4>`);
