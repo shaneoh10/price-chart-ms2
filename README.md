@@ -8,9 +8,24 @@ Price Chart is a website designed to provide users with the ability to search fo
 
 A link to the live website can be found [here.](https://shaneoh10.github.io/price-chart-ms2/)
 
+## Table of Contents
+
+- [User Experience (UX)](#ux)
+
+- [Features](#features)
+
+- [Technologies Used](#technologies-used)
+
+- [Testing](#testing)
+
+- [Deployment](#deployment)
+
+- [Credits](#credits)
+
+
 ## UX
 
-## Strategy
+### Strategy
 
 The price chart website is for users who are looking for real-time and historical data on stocks, foreign exchange and crypto-currency prices.The users may be interested in viewing this data for their own personal reasons like investing or trading, or they may want to view this data for research they may be performing as part of a project for a college course. The website will be simple to navigate and the data will be presented in a clear and easy to read format. As this website will only contain basic stock data it is targeted towards users with less experience with financial data as it may not be suited for experienced traders who are looking for more comprehensive data for their analysis, however, the website will have a professional feel to it and the data will be accurate so it is not strictly limited to beginners. The users of the price chart website will want to see clean and clearly labeled charts (price, date, time, stock name) that will not cause them any confusion with only relevant information being displayed to the user. The website will be designed for both mobile and desktop but will be targeted more towards desktop users where the charts will be much larger and easier to read.
 
@@ -23,7 +38,7 @@ The price chart website is for users who are looking for real-time and historica
 * be able to easily contact price chart with any questions or issues I am have regarding the website
 * be easily directed to any social media channels to remain up to date with price chart
 
-## Scope 
+### Scope 
 
 After analysing the user stories, I have decided to include the following features as my minimum scope:
 * Responsive design
@@ -33,7 +48,7 @@ After analysing the user stories, I have decided to include the following featur
 * Contact form
 * Social media links in footer
 
-## Structure 
+### Structure 
 
 I did some research on other websites that provide stock data and price charts to give me an idea of what users are familiar with. During my research I found that some websites provide a lot of data which may be difficult to understand and can be intimidating to less experienced users. Because of this I decided to design the website in a traditional manner similar to what I found on my research but with just the basic price data in the chart sections so as not to give users an overload of information. The website is designed to be easy to navigate and all information is displayed in a clean manner so that users will have a familiar and enjoyable experience.
 
@@ -45,11 +60,11 @@ I have structuted the website with:
 * Social media icons in the footer
 * Main content written in bootstrap for responsive design
 
-## Skeleton 
+### Skeleton 
 
 I designed wireframes for mobile, tablet and desktop using Balsamiq. These wireframes can be viewed [here.](https://github.com/shaneoh10/price-chart-ms2/tree/master/assets/documents/wireframes)
 
-## Surface
+### Surface
 
 #### Colours
 
@@ -66,6 +81,7 @@ I chose a neutral colour palette for the website so as not to distract the users
 #### Typography 
 
 I chose 'Cabin' as the font for the project as it is easy to read and it provides users with a sense of professionalism about the website.
+
 
 ## Features 
 
@@ -109,7 +125,9 @@ I chose 'Cabin' as the font for the project as it is easy to read and it provide
 * When the user presses the send button a loader gif is displayed and when the message has successfully sent a message providing that feedback is displayed.
 * On larger screens a list of contact details is displayed on screen. The email address and phone number on display have anchors attached to open up your email or phone when clicked to make it easier to get in contact.
 
+<a name="tech"></a>
 ## Technologies Used
+
 * HTML5 - This is the main language of the website content
 * CSS3 - This is used to style the web pages
 * Bootstrap v4.6 - The project uses Bootstrap elements to help with form and design
