@@ -122,4 +122,5 @@ The website displays an error message on screen to the user if the API request i
 
 ![error-message](assets/documents/testing-images/error-message.PNG)
 
-### 
+### Feedback from users
+I asked some of my friends to use the website and provide me with feedback on their experience. The feedback they provided was very positive with regards to the website being user friendly and there were no bugs reported. One friend in particular who had no previous exposure to financial data and price charts reported that he was easily able to find his way around the website and generate charts with no issues. This positive feedback from real users is further evidence that the overall goal of the website has been met.
