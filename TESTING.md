@@ -109,3 +109,15 @@ All website features worked across all browsers and devices tested and the websi
 #### I want to be easily directed to any social media channels to remain up to date with price chart
 - The social media icons are cleary displayed in the footer of the website.
 - I tested each icon individually to verify that when clicked it opens up the correct social media website in a new tab.
+
+## Further Testing
+
+### API Testing
+
+#### JSON data
+When building the project I wanted to make sure that the data that was being displayed on screen on the charts and tables was correct and as received from the API request. To check this I spent a bit of time making requests for a range of symbols, currency pairs and cryptocurrencies at various time intervals. I also made the same API request in a seperate browser window and compared the values to make sure that the correct values were being displayed on screen in the project. By doing this I was able to verify that I was correctly navigating the JSON data with the javascript functions and presenting the correct information to the website users.
+
+#### Error messages
+The website displays an error message on screen to the user if the API request is unsuccessful. By reading the API documentation from [Twelve Data](https://twelvedata.com/) I was able to find out that with the coding I have used to set up the website the main errors that can be induced from the user side are an incorrect symbol and too many API requests. To verify that the correct error messages were being displayed on screen in both of these cases I forced these errors on the website and can confirm that the correct error messages were displayed on screen. 
+
+![error-message](assets/documents/testing-images/error-message.PNG)
