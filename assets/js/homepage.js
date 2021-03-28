@@ -1,3 +1,4 @@
+/*jshint esversion: 6 */ 
 function getTesla() {
 
     $('#table').html('<img src="assets/images/loader.gif" alt="loading..."/>>');

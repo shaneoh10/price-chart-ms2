@@ -180,6 +180,7 @@ More information on cloning the project can be found [here](https://docs.github.
 * I used the TwelveData API documentation found [here](https://twelvedata.com/docs#getting-started) to implement the correct code for the API requests on my website
 * I copied the code and used the documentation found [here](https://scrollrevealjs.org/guide/hello-world.html) to set up the scroll reveal effect on the home page
 * Credit to Code Institute's Whiskey Drop walkthrough project for the HTML & CSS I used for the opaque overlay on the home page
+* [Stack Overflow](https://stackoverflow.com/) - There are many helpful posts on stack overflow that helpled me with solving problems that I was having during the development of the project
 
 #### Photos: 
 * Home page - [Unsplash - Markus Spiske @markusspiske](https://unsplash.com/@markusspiske)

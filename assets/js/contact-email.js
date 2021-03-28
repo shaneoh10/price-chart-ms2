@@ -1,3 +1,4 @@
+/*jshint esversion: 6 */ 
 // Code used from Code Institute UCD resume walkthrough project lectures
 
 function sendMail(contactForm) {

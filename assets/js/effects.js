@@ -1,3 +1,4 @@
+/*jshint esversion: 6 */ 
 // // Navbar collapse on page click
 // // https://mdbootstrap.com/support/general/auto-close-navbar-when-click-on-link-responsive-mode/
 

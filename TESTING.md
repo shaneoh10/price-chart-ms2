@@ -50,7 +50,7 @@ I ran all the JavaScript code through JSHint and I found a few errors which I wa
 
 - There were multiple counts of 'missing semicolon' which was easily resolved.
 - There was another warning as follows : 'Function declarations should not be placed in blocks. Use a function expression or move the statement to the top of the outer function.' I researched the problem and refactored the code to remove this warning.
-- There is another warning that remains present across all JavaScript files: 'template literal syntax is only available in ES6(use esversion:6)'. This can be ignored as Javascript version ES6 is used in the project.
+- There is another warning that remains present across all JavaScript files: 'template literal syntax is only available in ES6(use esversion:6)'. I found an article on stack overflow [here](https://stackoverflow.com/questions/37247474/es6-in-jshint-jshintrc-has-esversion-but-still-getting-warning-using-atom) that advises by adding `/*jshint esversion: 6 */ ` at the top of the javascript files it would clear this error. I implemented this solution and the errors were no longer present.
 
 ## Web Browser and Device Testing
 
@@ -121,3 +121,5 @@ When building the project I wanted to make sure that the data that was being dis
 The website displays an error message on screen to the user if the API request is unsuccessful. By reading the API documentation from [Twelve Data](https://twelvedata.com/) I was able to find out that with the coding I have used to set up the website the main errors that can be induced from the user side are an incorrect symbol and too many API requests. To verify that the correct error messages were being displayed on screen in both of these cases I forced these errors on the website and can confirm that the correct error messages were displayed on screen. 
 
 ![error-message](assets/documents/testing-images/error-message.PNG)
+
+### 
