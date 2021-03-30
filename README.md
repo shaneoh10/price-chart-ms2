@@ -85,6 +85,8 @@ I chose 'Cabin' as the font for the project as it is easy to read and it provide
 
 ## Features 
 
+I am using an API from [Twelve Data](https://twelvedata.com/) to fetch the data that is used in the tables and charts throughout the website. It is important to note that as I am not using the paid version of this service, my API key is restricted to 8 requests per minute and a total of 800 requests per day. The user will be notified with an error message when the API request limit has been reached.
+
 #### Across all pages:
 
 * The navbar will be visible at the top of the page across all pages of the website. The navbar has the Price Chart logo on the left and there are three navigation items on the right-hand side: Home, Charts & Contact. The Charts item has a dropdown menu with links to travel to three pages: Stocks, Forex & Crypto. The navbar collapses into a hamburger icon on smaller screens.
