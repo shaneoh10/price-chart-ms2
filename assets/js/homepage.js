@@ -1,4 +1,4 @@
-/*jshint esversion: 6 */ 
+/*jshint esversion: 6 */
 function getTesla() {
 
     $('#table').html('<img src="assets/images/loader.gif" alt="loading..."/>>');
@@ -8,7 +8,7 @@ function getTesla() {
     ).then(
         function(response) {
             var tableData = response;
-
+            // generate html for data table
             function stockTable() {
                 $('#table').html(`<div class="container" id="table">
             <table class="table table-dark">
@@ -37,10 +37,12 @@ function getTesla() {
             </table>
         </div>`);
             }
+            // error handling
             if (response.status === 'error') {
                 $('#table').html(
                     `Error: ${response.message}`);
-            } else {
+            } // call data table function
+            else {
                 stockTable(response);
             }
         });

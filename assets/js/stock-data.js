@@ -1,4 +1,4 @@
-/*jshint esversion: 6 */ 
+/*jshint esversion: 6 */
 function getStocks() {
 
     var chartPrice = [];
@@ -9,6 +9,7 @@ function getStocks() {
 
     var interval = $('input[name="interval"]:checked').val();
 
+    // display message if no stock symbol entered
     var stockSymbol = $('#stock-symbol').val();
     if (!stockSymbol) {
         $('#stock-name').html(`<h3 class="text-center mt-5">Please enter a stock symbol!</h3>`);
@@ -17,6 +18,7 @@ function getStocks() {
         return;
     }
 
+    // display loader gif 
     $('#loader-container').html(
         `<div id="loader">
             <img src="assets/images/loader.gif" alt="loading..."/>>
@@ -27,9 +29,10 @@ function getStocks() {
         $.getJSON(`https://api.twelvedata.com/price?symbol=${stockSymbol}&apikey=d6cceea44f2c4640ba375bcfb65a4fc8`),
         $.getJSON(`https://api.twelvedata.com/time_series?symbol=${stockSymbol}&interval=${interval}&apikey=d6cceea44f2c4640ba375bcfb65a4fc8`)
     ).then(
-        function (response1, response2, response3) {
+        function(response1, response2, response3) {
             var tableData = response1[0];
 
+            // generate html for data table
             function stockTable() {
                 $('#table').html(`<div class="container" id="table">
             <table class="table table-dark">
@@ -62,6 +65,7 @@ function getStocks() {
             </table>
         </div>`);
             }
+            // error handling
             if (response3[0].status === 'error') {
                 $('#loader-container').html('');
                 $('#chart-control').html(
@@ -70,14 +74,16 @@ function getStocks() {
             } else {
                 $('#chart-control').html('<canvas id="myChart" width="100%" height="100%"></canvas>');
                 $('#loader-container').html('');
+
+                // parse JSON data and display on screen
                 var stockName = response1[0].name;
                 var stockPrice = response2[0].price;
                 var currency = response1[0].currency;
                 stockPrice = stockPrice.slice(0, -3);
-
                 $('#stock-name').html(stockName);
                 $('#stock-price').html(stockPrice + ' ' + currency);
 
+                // parse JSON data for chart data and labels
                 var data = response3[0];
                 for (i = 0; i < data.values.length; i++) {
                     chartPrice.push(data.values[i].open);
@@ -86,6 +92,7 @@ function getStocks() {
                 chartPrice.reverse();
                 chartTime.reverse();
 
+                // Code from chart.js to generate chart
                 var ctx = document.getElementById('myChart').getContext('2d');
                 var myChart = new Chart(ctx, {
                     type: 'line',
