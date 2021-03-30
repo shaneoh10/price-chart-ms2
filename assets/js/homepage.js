@@ -41,7 +41,8 @@ function getTesla() {
             if (response.status === 'error') {
                 $('#table').html(
                     `Error: ${response.message}`);
-            } // call data table function
+            } 
+            // call data table function
             else {
                 stockTable(response);
             }

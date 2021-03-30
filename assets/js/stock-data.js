@@ -92,7 +92,7 @@ function getStocks() {
                 chartPrice.reverse();
                 chartTime.reverse();
 
-                // Code from chart.js to generate chart
+                // Code from https://www.chartjs.org/docs/latest/ to generate chart
                 var ctx = document.getElementById('myChart').getContext('2d');
                 var myChart = new Chart(ctx, {
                     type: 'line',
