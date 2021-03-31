@@ -9,6 +9,7 @@ function getTesla() {
         function(response) {
             var tableData = response;
             // generate html for data table
+            // Bootstrap table from https://getbootstrap.com/docs/4.0/content/tables/
             function stockTable() {
                 $('#table').html(`<div class="container" id="table">
             <table class="table table-dark">

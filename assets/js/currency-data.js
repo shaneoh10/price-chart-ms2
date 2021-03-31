@@ -25,6 +25,7 @@ function getCurrency() {
             var tableData = response1[0];
 
             // generate html for data table
+            // Bootstrap table from https://getbootstrap.com/docs/4.0/content/tables/
             function stockTable() {
                 $('#table').html(`<div class="container" id="table">
             <table class="table table-dark">
