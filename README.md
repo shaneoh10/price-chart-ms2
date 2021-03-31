@@ -176,7 +176,7 @@ More information on cloning the project can be found [here](https://docs.github.
 * The bootstrap navbar was copied from [here](https://getbootstrap.com/docs/4.6/components/navbar/) and edited to suit my project
 * The bootstrap time interval radio buttons were copied from [here](https://getbootstrap.com/docs/4.6/components/buttons/) and edited to suit my project
 * The bootstrap contact form was copied from [here](https://getbootstrap.com/docs/4.6/components/forms/) and edited to suit my project
-* The bootstrap table was copied from [here](// Bootstrap table from https://getbootstrap.com/docs/4.0/content/tables/) and edited to suit my project
+* The bootstrap table was copied from [here](https://getbootstrap.com/docs/4.0/content/tables/) and edited to suit my project
 * Auto close navbar on click outside navbar - code credit to [this post](https://mdbootstrap.com/support/general/auto-close-navbar-when-click-on-link-responsive-mode/) on mdbootstrap.com. Edited code to suit project.
 * Email.js code was copied from Code Institute UCD Resume walkthrough project and edited to suit my project
 * Chart.js code to generate chart was copied from [here](https://www.chartjs.org/docs/latest/) and documentation was used to edit chart for my project
