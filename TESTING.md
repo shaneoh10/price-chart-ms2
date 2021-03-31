@@ -92,6 +92,8 @@ All website features worked across all browsers and devices tested and the websi
 - If no stock symbol is entered into the search bar an error message appears prompting the user to enter a stock symbol, this has been tested and is working.
 - Any errors from the API are also displayed on screen to give the user feedback as to why the chart is not working.(incorrect symbol, API call limit etc.) I tested this by entering incorrect symbols and by generating charts in quick succession and it is working ok.
 
+![stock-page](assets/documents/testing-images/stock-page.png)
+
 #### I want to be able to choose different time intervals on the price charts
 - On each chart page there are four buttons below the search bar or dropdown menu which allow the user to choose a time interval for the chart.
 - All time intervals have been tested on each page and are working correctly.
